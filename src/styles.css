@@ -1,0 +1,307 @@
+@import "tailwindcss" source(none);
+@import "tw-animate-css";
+@source "../src";
+
+@custom-variant dark (&:is(.dark *));
+
+/* SentinelIQ — Command-center dark theme
+ * Deep navy background, electric blue accents.
+ * Fonts: DM Sans (display), Inter (body).
+ */
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+
+  --shadow-glow: 0 0 40px -10px var(--primary);
+  --shadow-elevated: 0 20px 60px -20px oklch(0 0 0 / 0.6);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Deep navy base */
+  --background: oklch(0.13 0.04 270);
+  --foreground: oklch(0.98 0.01 250);
+
+  --card: oklch(0.17 0.04 268 / 0.7);
+  --card-foreground: oklch(0.98 0.01 250);
+
+  --popover: oklch(0.16 0.04 268);
+  --popover-foreground: oklch(0.98 0.01 250);
+
+  /* Electric blue */
+  --primary: oklch(0.62 0.22 260);
+  --primary-foreground: oklch(0.99 0.005 250);
+  --primary-glow: oklch(0.72 0.20 250);
+
+  --secondary: oklch(0.22 0.04 268);
+  --secondary-foreground: oklch(0.98 0.01 250);
+
+  --muted: oklch(0.21 0.03 268);
+  --muted-foreground: oklch(0.65 0.03 260);
+
+  --accent: oklch(0.62 0.22 260 / 0.18);
+  --accent-foreground: oklch(0.98 0.01 250);
+
+  --destructive: oklch(0.62 0.24 25);
+  --destructive-foreground: oklch(0.99 0.005 250);
+
+  --success: oklch(0.7 0.18 155);
+  --warning: oklch(0.78 0.17 75);
+
+  --border: oklch(0.62 0.22 260 / 0.18);
+  --input: oklch(0.25 0.04 268);
+  --ring: oklch(0.62 0.22 260);
+  --sidebar: oklch(0.11 0.04 270 / 0.95);
+  --sidebar-foreground: oklch(0.98 0.01 250);
+}
+
+.dark {
+  /* Same — design is dark-first */
+  --background: oklch(0.13 0.04 270);
+  --foreground: oklch(0.98 0.01 250);
+  --card: oklch(0.17 0.04 268 / 0.7);
+  --card-foreground: oklch(0.98 0.01 250);
+  --popover: oklch(0.16 0.04 268);
+  --popover-foreground: oklch(0.98 0.01 250);
+  --primary: oklch(0.62 0.22 260);
+  --primary-foreground: oklch(0.99 0.005 250);
+  --primary-glow: oklch(0.72 0.2 250);
+  --secondary: oklch(0.22 0.04 268);
+  --secondary-foreground: oklch(0.98 0.01 250);
+  --muted: oklch(0.21 0.03 268);
+  --muted-foreground: oklch(0.65 0.03 260);
+  --accent: oklch(0.62 0.22 260 / 0.18);
+  --accent-foreground: oklch(0.98 0.01 250);
+  --destructive: oklch(0.62 0.24 25);
+  --destructive-foreground: oklch(0.99 0.005 250);
+  --border: oklch(0.62 0.22 260 / 0.18);
+  --input: oklch(0.25 0.04 268);
+  --ring: oklch(0.62 0.22 260);
+  --sidebar: oklch(0.11 0.04 270 / 0.95);
+  --sidebar-foreground: oklch(0.98 0.01 250);
+}
+
+.light {
+  /* Premium light theme variables */
+  --background: oklch(0.98 0.005 250);
+  --foreground: oklch(0.13 0.04 270);
+  --card: oklch(0.95 0.01 250 / 0.85);
+  --card-foreground: oklch(0.13 0.04 270);
+  --popover: oklch(0.96 0.01 250);
+  --popover-foreground: oklch(0.13 0.04 270);
+  --primary: oklch(0.55 0.20 260);
+  --primary-foreground: oklch(0.99 0.005 250);
+  --primary-glow: oklch(0.65 0.18 250);
+  --secondary: oklch(0.92 0.01 250);
+  --secondary-foreground: oklch(0.13 0.04 270);
+  --muted: oklch(0.90 0.01 250);
+  --muted-foreground: oklch(0.45 0.02 260);
+  --accent: oklch(0.55 0.20 260 / 0.1);
+  --accent-foreground: oklch(0.13 0.04 270);
+  --destructive: oklch(0.55 0.24 25);
+  --destructive-foreground: oklch(0.99 0.005 250);
+  --border: oklch(0.13 0.04 270 / 0.12);
+  --input: oklch(0.92 0.01 250);
+  --ring: oklch(0.55 0.20 260);
+  --sidebar: oklch(0.96 0.01 250 / 0.95);
+  --sidebar-foreground: oklch(0.13 0.04 270);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: linear-gradient(
+      135deg,
+      oklch(0.2 0.04 268 / 0.85),
+      oklch(0.15 0.04 270 / 0.8)
+    );
+    /* backdrop-filter removed to prevent Chrome GPU lockups on Windows */
+    border: 1px solid oklch(0.62 0.22 260 / 0.2);
+  }
+  .light .glass {
+    background: linear-gradient(
+      135deg,
+      oklch(0.98 0.01 250 / 0.85),
+      oklch(0.95 0.01 250 / 0.8)
+    );
+    border: 1px solid oklch(0.55 0.20 260 / 0.12);
+  }
+
+  .gradient-text {
+    background: linear-gradient(
+      90deg,
+      oklch(0.95 0.02 250),
+      oklch(0.72 0.2 250)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(oklch(0.62 0.22 260 / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.62 0.22 260 / 0.07) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .radial-mask {
+    mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+  }
+
+  .glow-border {
+    position: relative;
+  }
+  .glow-border::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      120deg,
+      oklch(0.62 0.22 260),
+      oklch(0.72 0.2 250),
+      oklch(0.62 0.22 260)
+    );
+    background-size: 200% 200%;
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: borderShift 4s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes borderShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+
+  @keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+  .cursor-blink::after {
+    content: "▍";
+    margin-left: 4px;
+    color: var(--primary-glow);
+    animation: blink 1s steps(2) infinite;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  .animate-float { animation: float 6s ease-in-out infinite; }
+
+  @keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+  }
+  .pulse-dot { animation: pulseDot 1.4s ease-in-out infinite; }
+
+  @keyframes pulseRing {
+    0% { box-shadow: 0 0 0 0 oklch(0.7 0.18 155 / 0.6); }
+    100% { box-shadow: 0 0 0 10px oklch(0.7 0.18 155 / 0); }
+  }
+  .pulse-ring { animation: pulseRing 2s ease-out infinite; }
+
+  @keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+  .scanline::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 0%, oklch(0.62 0.22 260 / 0.18) 50%, transparent 100%);
+    animation: scan 4s linear infinite;
+    pointer-events: none;
+  }
+
+  .surveil-bg {
+    background-image:
+      repeating-linear-gradient(0deg, oklch(1 0 0 / 0.02) 0 1px, transparent 1px 3px);
+  }
+
+  .map-dot {
+    width: 10px; height: 10px; border-radius: 999px;
+    background: var(--primary-glow);
+    box-shadow: 0 0 0 4px oklch(0.62 0.22 260 / 0.25), 0 0 18px var(--primary-glow);
+  }
+  .map-dot.alert {
+    background: oklch(0.7 0.22 25);
+    box-shadow: 0 0 0 4px oklch(0.7 0.22 25 / 0.25), 0 0 18px oklch(0.7 0.22 25);
+  }
+}
+
+input::placeholder {
+  color: #475569;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
